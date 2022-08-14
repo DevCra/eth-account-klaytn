@@ -48,7 +48,7 @@ with open('./README.md') as readme:
 setup(
     name='eth-account-klaytn',
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
-    version='0.6.2',
+    version='0.6.3',
     description="""eth-account-klaytn: Sign Ethereum transactions and messages with local private keys + klaytn""",
     long_description=long_description,
     long_description_content_type='text/markdown',
