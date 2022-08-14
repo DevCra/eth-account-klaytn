@@ -71,6 +71,7 @@ from eth_account.hdaccount import (
 from eth_account.messages import (
     SignableMessage,
     _hash_eip191_message,
+    _hash_eip191_message_klaytn
 )
 from eth_account.signers.local import (
     LocalAccount,
