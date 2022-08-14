@@ -46,17 +46,17 @@ with open('./README.md') as readme:
 
 
 setup(
-    name='eth-account',
+    name='eth-account-klaytn',
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
     version='0.6.1',
-    description="""eth-account: Sign Ethereum transactions and messages with local private keys""",
+    description="""eth-account-klaytn: Sign Ethereum transactions and messages with local private keys + klaytn""",
     long_description=long_description,
     long_description_content_type='text/markdown',
-    author='The Ethereum Foundation',
-    author_email='snakecharmers@ethereum.org',
-    url='https://github.com/ethereum/eth-account',
+    author='Daniel Bae',
+    author_email='daniel.bae@devcra.com',
+    url='https://github.com/DevCra/eth-account-klaytn',
     include_package_data=True,
-    package_data={"eth_account": [
+    package_data={"eth_account_klaytn": [
         "py.typed",
         "hdaccount/wordlist/*.txt",
     ]},
@@ -72,7 +72,7 @@ setup(
     ],
     python_requires='>=3.6, <4',
     extras_require=extras_require,
-    py_modules=['eth_account'],
+    py_modules=['eth_account_klaytn'],
     license="MIT",
     zip_safe=False,
     keywords='ethereum',
