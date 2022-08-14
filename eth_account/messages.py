@@ -73,6 +73,18 @@ def _hash_eip191_message(signable_message: SignableMessage) -> Hash32:
     return Hash32(keccak(joined))
 
 
+def _hash_eip191_message_klaytn(signable_message: SignableMessage) -> Hash32:
+    version = signable_message.version
+    if len(version) != 1:
+        raise ValidationError(
+            f"The supplied message version is {version!r}. "
+            "The EIP-191 signable message standard only supports one-byte versions."
+        )
+
+    joined = b"\x19Klaytn Signed Message:\n" + str(len(signable_message.body)).encode() + signable_message.body
+    return Hash32(keccak(joined))
+
+
 # watch for updates to signature format
 def encode_intended_validator(
         validator_address: Union[Address, str],
